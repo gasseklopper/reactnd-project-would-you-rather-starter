@@ -8,7 +8,7 @@ export default class MenuExampleSecondary extends Component {
 
 
     return (
-      <Menu secondary>
+      <Menu primary>
 				<NavLink to="/" exact className="item" activeClassName="active">
 					Home
 				</NavLink>
@@ -19,9 +19,9 @@ export default class MenuExampleSecondary extends Component {
 					Leader Board
 				</NavLink>
         <Menu.Menu position='right'>
-          <Menu.Item>
-
-          </Menu.Item>
+					<NavLink to="/login" exact className="item" activeClassName="active">
+            Login
+          </NavLink>
 					<NavLink to="/logout" exact className="item" activeClassName="active">
             Logout
           </NavLink>

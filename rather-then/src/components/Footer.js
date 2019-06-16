@@ -4,11 +4,14 @@ import { Segment, Container } from 'semantic-ui-react'
 class Footer extends Component {
   render() {
     return (
-		<Segment inverted  className="footer" color = 'red' style = {
+		<Segment inverted  className="footer" color = 'grey' style = {
 			{
 				marginTop: "3em",
 				padding: "3em",
-				width: "100%"
+				width: "100%",
+				position: "fixed",
+				bottom: "0",
+				left: "0"
 			}}>
 				<Container textAlign = 'center' style = {
 					{

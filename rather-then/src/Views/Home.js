@@ -1,24 +1,14 @@
 import React from 'react'
-import { Segment, Grid } from 'semantic-ui-react'
-import Footer from "../components/Footer";
-import Navigation from "../components/Navigation";
 import Polls from "../components/Polls";
+import { Container, Header } from 'semantic-ui-react';
 
 const Home = () => {
 	return(
-  <Grid columns={2} divided>
-    <Grid.Row stretched>
-      <Grid.Column>
-        <Segment>1</Segment>
-      </Grid.Column>
-      <Grid.Column>
-        <Navigation/>
-		 <Polls/>
-		< Footer/>
-      </Grid.Column>
-    </Grid.Row>
-  </Grid>
-
+		<Container>
+			<Header as='h1'>Would You Rather than </Header>
+			<Header as='h3'>Answered and Unanswered Questions</Header>
+			<Polls/>
+		</Container>
 
 	)
 }

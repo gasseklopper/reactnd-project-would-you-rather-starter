@@ -1,32 +1,28 @@
 import React from 'react'
-import { Segment, Grid } from 'semantic-ui-react'
-import Footer from "../components/Footer";
+import { Button, Grid, Container, Message, Header } from 'semantic-ui-react'
+import { NavLink } from "react-router-dom";
 
 const Logout = () => {
 	return(
-  <Grid columns={2} divided>
-    <Grid.Row stretched>
-      <Grid.Column>
-        <Segment>1</Segment>
-      </Grid.Column>
-      <Grid.Column>
-
-					<Grid columns={2} divided>
-						<Grid.Row stretched>
-						<Grid.Column>
-							<Segment>Logout</Segment>
-						</Grid.Column>
-						<Grid.Column>
-							<Segment>2</Segment>
-						</Grid.Column>
-						</Grid.Row>
-					</Grid>
-		< Footer/>
-      </Grid.Column>
-    </Grid.Row>
-  </Grid>
-
-
+		<Container>
+			<Grid columns={1} divided>
+				<Grid.Row stretched>
+				<Grid.Column>
+					<Header as='h1'>Logout</Header>
+					<Message
+						success
+						header='Your logout was successful'
+						content='You can log-in again here'
+					/>
+					<Container>
+						<NavLink to="/login" exact>
+							<Button>Login</Button>
+						</NavLink>
+					</Container>
+				</Grid.Column>
+				</Grid.Row>
+			</Grid>
+		</Container>
 	)
 }
 

@@ -1,23 +1,16 @@
 import React from 'react'
-import { Segment, Grid } from 'semantic-ui-react'
-import Footer from "../components/Footer";
-import Navigation from "../components/Navigation";
-import Polls from "../components/Polls";
+import AddPollCard from "../components/AddPollCard";
+import { Container, Header } from 'semantic-ui-react';
 
 const AddPoll = () => {
 	return(
-  <Grid columns={2} divided>
-    <Grid.Row stretched>
-      <Grid.Column>
-        <Segment>ADD</Segment>
-      </Grid.Column>
-      <Grid.Column>
-        <Navigation/>
-		 <Polls/>
-		< Footer/>
-      </Grid.Column>
-    </Grid.Row>
-  </Grid>
+<Container>
+<Header as='h3'>Add question</Header>
+<Header as='h1'>Would You Rather than?</Header>
+<AddPollCard ></ AddPollCard>
+</Container>
+
+
 	)
 }
 
