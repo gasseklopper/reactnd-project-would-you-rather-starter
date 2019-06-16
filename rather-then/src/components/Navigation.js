@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { NavLink } from "react-router-dom";
-import { Menu } from 'semantic-ui-react'
+import { Menu, Label } from 'semantic-ui-react'
 
 export default class MenuExampleSecondary extends Component {
 
-  render() {
+	render() {
 
 
-    return (
-      <Menu primary>
+		return (
+			<Menu primary>
 				<NavLink to="/" exact className="item" activeClassName="active">
 					Home
 				</NavLink>
@@ -18,15 +18,23 @@ export default class MenuExampleSecondary extends Component {
 				<NavLink to="/leaderboard" exact className="item" activeClassName="active">
 					Leader Board
 				</NavLink>
-        <Menu.Menu position='right'>
+				<Menu.Menu position='right'>
+					<Menu.Item>
+						<div>
+							<Label image>
+								<img alt='' src='https://react.semantic-ui.com/images/avatar/small/elliot.jpg' />
+									Elliot
+							</Label>
+						</div>
+					</Menu.Item>
 					<NavLink to="/login" exact className="item" activeClassName="active">
-            Login
-          </NavLink>
+						Login
+					</NavLink>
 					<NavLink to="/logout" exact className="item" activeClassName="active">
-            Logout
-          </NavLink>
-        </Menu.Menu>
-      </Menu>
-    )
-  }
+						Logout
+					</NavLink>
+				</Menu.Menu>
+			</Menu>
+		)
+	}
 }
