@@ -3,7 +3,7 @@ import Polls from "../components/Polls";
 import { Container, Header, Button } from 'semantic-ui-react';
 import { NavLink } from "react-router-dom";
 
-const Home = () => {
+export const Home = () => {
 	return(
 		<Container>
 			<Header as='h1'>Would You Rather than </Header>
