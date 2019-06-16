@@ -1,14 +1,15 @@
 import React from 'react'
-import { Button, Grid, Container, Message, Header } from 'semantic-ui-react'
+import { Button, Container, Message, Card } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
 const Logout = () => {
 	return(
 		<Container>
-			<Grid columns={1} divided>
-				<Grid.Row stretched>
-				<Grid.Column>
-					<Header as='h1'>Logout</Header>
+			<Card centered>
+				<Card.Content>
+					<Card.Header>Logout</Card.Header>
+				</Card.Content>
+				<Card.Content extra>
 					<Message
 						success
 						header='Your logout was successful'
@@ -16,12 +17,11 @@ const Logout = () => {
 					/>
 					<Container>
 						<NavLink to="/login" exact>
-							<Button>Login</Button>
+							<Button fluid>Login Page</Button>
 						</NavLink>
 					</Container>
-				</Grid.Column>
-				</Grid.Row>
-			</Grid>
+				</Card.Content>
+			</Card>
 		</Container>
 	)
 }

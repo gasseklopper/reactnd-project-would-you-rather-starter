@@ -1,25 +1,19 @@
 import React from 'react'
-import { Form, Button } from 'semantic-ui-react'
+import { Form, Button, Header } from 'semantic-ui-react'
 
 const AddPollCard = () => (
   <Form>
-    <Form.Group widths='equal'>
-      <Form.Input
-
-        id='form-subcomponent-shorthand-input-option-one'
-        label='Option One'
-        placeholder='Please enter option one text here'
-      />
-      <Form.Input
-
-        id='form-subcomponent-shorthand-input-option-two'
-        label='Option Two'
-        placeholder='Please enter option two text here'
-      />
-    </Form.Group>
-    <Form.Field control={Button}>Submit</Form.Field>
+    <Form.Field>
+      <label>Option one</label>
+      <input placeholder='Please enter option one text here' />
+    </Form.Field>
+    <Form.Field>
+        <Header as='h4'>and</Header>
+      <label>Option two</label>
+      <input placeholder='Please enter option two text here' />
+    </Form.Field>
+    <Button type='submit'>Submit</Button>
   </Form>
-
 )
 
 export default AddPollCard
