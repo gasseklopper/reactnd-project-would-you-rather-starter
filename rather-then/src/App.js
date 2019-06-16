@@ -5,6 +5,8 @@ import Home from './Views/Home'
 import Logout from './Views/Logout'
 import Leaderboard from './Views/Leaderboard'
 import AddPoll from './Views/AddPoll'
+import Answered from './Views/Answered'
+import Unanswered from './Views/Unanswered'
 import Login from './Views/Login'
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
@@ -26,6 +28,8 @@ class RatherApp extends React.Component {
 												<Route exact path='/logout' render={() => (<Logout/>)} />
 												<Route exact path='/leaderboard' render={() => (<Leaderboard/>)} />
 												<Route exact path='/add' render={() => (<AddPoll/>)} />
+												<Route exact path='/question/answered' render={() => (<Answered/>)} />
+												<Route exact path='/question/unanswered' render={() => (<Unanswered/>)} />
 												<Route render={() => <Login/>}/>
 											</Switch>
 										</Grid.Column>
