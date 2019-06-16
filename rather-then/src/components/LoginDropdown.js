@@ -22,9 +22,12 @@ const UserOptions = [
   }
 ]
 
-const LoginDropdown = () => (
-  <Container>
+class LoginDropdown extends React.Component {
 
+  render () {
+
+    return (
+    <Container>
     <Form>
     <Form.Dropdown
       placeholder='Select User'
@@ -40,7 +43,9 @@ const LoginDropdown = () => (
     <Button fluid>Login</Button>
   </Form>
   </Container>
+  )
+  }
+}
 
-)
 
 export default LoginDropdown
