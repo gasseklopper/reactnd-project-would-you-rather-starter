@@ -8,7 +8,7 @@ export default class MenuExampleSecondary extends Component {
 
 
 		return (
-			<Menu primary>
+			<Menu>
 				<NavLink to="/" exact className="item" activeClassName="active">
 					Home
 				</NavLink>
