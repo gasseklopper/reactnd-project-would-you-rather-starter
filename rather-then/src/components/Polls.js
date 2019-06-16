@@ -6,15 +6,15 @@ const panes = [
   {
     menuItem: (
       <Menu.Item key='messages'>
-        Answered<Label>15</Label>
+        Answered<Label>2</Label>
       </Menu.Item>
     ),
-    render: () => <Tab.Pane>Tab 1 Content<PollCard/></Tab.Pane>,
+    render: () => <Tab.Pane><PollCard/><PollCard/></Tab.Pane>,
   },
   {
     menuItem: (
       <Menu.Item key='messages'>
-        Unanswered < Label > 15 < /Label>
+        Unanswered < Label > 4 < /Label>
       </Menu.Item>
     ),
     render: () => <Tab.Pane>

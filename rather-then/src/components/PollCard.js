@@ -1,23 +1,17 @@
 import React from 'react'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Button, Image } from 'semantic-ui-react'
 
 const PollCard = () => (
   <Card>
     <Image src='https://react.semantic-ui.com/images/avatar/large/elliot.jpg' wrapped ui={false} />
     <Card.Content>
-      <Card.Header>Matthew</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
+      <Card.Header>Matthew asks</Card.Header>
       <Card.Description>
-        Matthew is a musician living in Nashville.
+       Would you rather write JavaScript or write Swift?
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-
-        <Icon name='user' />
-        22 Friends
-
+       <Button fluid>View Poll</Button>
     </Card.Content>
   </Card>
 )
