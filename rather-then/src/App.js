@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React, {Component} from 'react';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import { Container, Grid } from 'semantic-ui-react'
 import Home from './Views/Home'
 import Logout from './Views/Logout'
@@ -11,8 +11,28 @@ import Login from './Views/Login'
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 
+const fakeAuth = {
+	isAuthenticated: false,
+	authebticate(cb) {
+		this.isAuthenticated = true
+		setTimeout(cb, 100)
+	},
+	signOut(cb) {
+		this.isAuthenticated = false
+		setTimeout(cb, 100)
+	}
+}
+const PrivateRoute = ({ component: Component, ...rest }) => (
+	<Route
+	 {...rest} render={(props) => (
+		fakeAuth.isAuthenticated === true
+		? <Component {...props}/>
+		: <Redirect to='/login'/>
+	)}/>
+)
 
-class RatherApp extends React.Component {
+
+class RatherApp extends Component {
 	render() {
 		return (
 			<Router>
@@ -24,13 +44,13 @@ class RatherApp extends React.Component {
 									<Grid.Row stretched>
 										<Grid.Column>
 											<Switch>
-												<Route exact path='/' render={() => (<Home/>)} />
-												<Route exact path='/logout' render={() => (<Logout/>)} />
-												<Route exact path='/leaderboard' render={() => (<Leaderboard/>)} />
-												<Route exact path='/add' render={() => (<AddPoll/>)} />
-												<Route exact path='/question/answered' render={() => (<Answered/>)} />
-												<Route exact path='/question/unanswered' render={() => (<Unanswered/>)} />
-												<Route render={() => <Login/>}/>
+												<PrivateRoute exact path='/'component={Home} />
+												<Route exact path='/logout' component={Logout}/>
+												<PrivateRoute exact path='/leaderboard' component={Leaderboard} />
+												<PrivateRoute exact path='/add' component={AddPoll} />
+												<PrivateRoute exact path='/question/answered' component={Answered} />
+												<PrivateRoute exact path='/question/unanswered' component={Unanswered} />
+												<Route  component={Login} />
 											</Switch>
 										</Grid.Column>
 									</Grid.Row>
