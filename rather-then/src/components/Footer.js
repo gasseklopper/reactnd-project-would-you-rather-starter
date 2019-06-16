@@ -18,8 +18,7 @@ class Footer extends Component {
 						fontSize: "0.9em"
 					}
 				}>
-					{new Date().getFullYear()},footer Would You Rather app created using React,
-		Redux, React Router, Semantic UI and friends.
+					Markus Morley, {new Date().getFullYear()}, created with React, Adobe XD, Semantic Ui
 				</Container>
 		</Segment >
     )

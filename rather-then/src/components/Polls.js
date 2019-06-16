@@ -5,7 +5,7 @@ import PollCard from "../components/PollCard";
 const panes = [
   {
     menuItem: (
-      <Menu.Item key='messages'>
+      <Menu.Item key='Answered'>
         Answered<Label>2</Label>
       </Menu.Item>
     ),
@@ -13,7 +13,7 @@ const panes = [
   },
   {
     menuItem: (
-      <Menu.Item key='messages'>
+      <Menu.Item key='Unanswered'>
         Unanswered < Label > 4 < /Label>
       </Menu.Item>
     ),
