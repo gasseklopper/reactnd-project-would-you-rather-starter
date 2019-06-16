@@ -14,36 +14,29 @@ class RatherApp extends React.Component {
 	render() {
 		return (
 			<Router>
-			<div className="App">
-				<header className="App-header">
-	<Container>
-		<Navigation/>
-			<Grid columns={1} divided>
-				<Grid.Row stretched>
-					<Grid.Column>
-						<Switch>
-
-								<Route exact path='/' render={() => (<Home/>)} />
-								<Route exact path='/logout' render={() => (<Logout/>)} />
-								<Route exact path='/leaderboard' render={() => (<Leaderboard/>)} />
-								<Route exact path='/add' render={() => (<AddPoll/>)} />
-								<Route render={() => <Login/>}/>
-
-
-						</Switch>
-					</Grid.Column>
-				</Grid.Row>
-			</Grid>
-		<Footer/>
-	</Container>
-
-
-
-
-			</header>
-		</div>
+				<div className="App">
+					<header className="App-header">
+						<Container>
+							<Navigation/>
+								<Grid columns={1} divided>
+									<Grid.Row stretched>
+										<Grid.Column>
+											<Switch>
+												<Route exact path='/' render={() => (<Home/>)} />
+												<Route exact path='/logout' render={() => (<Logout/>)} />
+												<Route exact path='/leaderboard' render={() => (<Leaderboard/>)} />
+												<Route exact path='/add' render={() => (<AddPoll/>)} />
+												<Route render={() => <Login/>}/>
+											</Switch>
+										</Grid.Column>
+									</Grid.Row>
+								</Grid>
+							<Footer/>
+						</Container>
+				</header>
+			</div>
 		</Router>
-	);
+		);
 	}
 }
 export default RatherApp
