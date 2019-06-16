@@ -1,5 +1,5 @@
 import React from 'react'
-import { Label, Menu, Tab, Grid } from 'semantic-ui-react'
+import { Label, Menu, Tab, Grid, Container } from 'semantic-ui-react'
 import PollCard from "../components/PollCard";
 
 const panes = [
@@ -17,34 +17,27 @@ const panes = [
         Unanswered < Label > 4 < /Label>
       </Menu.Item>
     ),
-    render: () => <Tab.Pane>
-
-  <Grid>
-    <Grid.Row>
-      <Grid.Column width={8}>
-		< PollCard / >
-      </Grid.Column>
-      <Grid.Column width={8}>
-< PollCard / >
-      </Grid.Column>
-    </Grid.Row>
-
-    <Grid.Row>
-      <Grid.Column width={8}>
-
-      </Grid.Column>
-      <Grid.Column width={8}>
-
-      </Grid.Column>
-    </Grid.Row>
-  </Grid>
-
-
-		<PollCard/>
-		< PollCard / >
-			< PollCard / >
-				< PollCard / >
-		</Tab.Pane>,
+    render: () =>
+      <Tab.Pane>
+<Container>
+        <Grid center>
+        <Grid.Row>
+          <Grid.Column width={5}>
+        < PollCard / >
+          </Grid.Column>
+          <Grid.Column width={5}>
+            < PollCard / >
+          </Grid.Column>
+          <Grid.Column width={5}>
+            < PollCard / >
+          </Grid.Column>
+          <Grid.Column width={5}>
+            < PollCard / >
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+</Container>
+		  </Tab.Pane>,
   },
 ]
 
