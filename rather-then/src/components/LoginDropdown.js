@@ -47,5 +47,4 @@ class LoginDropdown extends React.Component {
   }
 }
 
-
 export default LoginDropdown

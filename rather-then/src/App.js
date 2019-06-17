@@ -34,7 +34,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 class RatherApp extends Component {
 	  state = {
-    redirectToReferrer: false
+    redirectToReferrer: "false"
   }
   login = () => {
     fakeAuth.authenticate(() => {
@@ -61,7 +61,7 @@ class RatherApp extends Component {
 								<Grid columns={1} divided>
 									<Grid.Row stretched>
 										<Grid.Column>
-											<Button  onClick={this.login} fluid>Login</Button>
+											<Button  onClick={this.login} fluid>Login {this.state.redirectToReferrer}</Button>
 											<Switch>
 												<PrivateRoute exact path='/'component={Home} />
 												<Route exact path='/logout' component={Logout}/>
@@ -69,7 +69,7 @@ class RatherApp extends Component {
 												<PrivateRoute exact path='/add' component={AddPoll} />
 												<PrivateRoute exact path='/question/answered' component={Answered} />
 												<PrivateRoute exact path='/question/unanswered' component={Unanswered} />
-												<Route  component={Login}  redirectToReferrer={this.state}/>
+												<Route  component={Login}  reeedirectToReferrer={this.state.redirectToReferrer}/>
 											</Switch>
 										</Grid.Column>
 									</Grid.Row>
